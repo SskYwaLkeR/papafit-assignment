@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>List of all contacts:</h1>
+
+    <% contact.forEach(function(contacts,idx){ %>
+    <span><%= idx+1 %>)&nbsp;</span>
+    <%= JSON.stringify( contacts.contact[0].name) %> <%= JSON.stringify(
+    contacts.contact[0].number) %>
+
+    <a href="/delete/<%= contacts._id %>">Delete</a>
+    <a href="/update/<%= contacts._id %>">Update</a> <br /><br />
+    <%})%>
+  </body>
+</html>

@@ -5,7 +5,7 @@ mongoose.connect("mongodb://localhost/phonebook", () => {
 });
 
 const phoneBookSchema = mongoose.Schema({
-  contacts: Array
+  contact: Array
 });
 
 module.exports = mongoose.model("phonebook", phoneBookSchema);
