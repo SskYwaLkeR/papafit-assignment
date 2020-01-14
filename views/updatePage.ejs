@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/update/<%= contact._id %>" method="post">
+      <input
+        type="text"
+        name="contactName"
+        placeholder="contact name"
+        value="<%= contact.contact[0].name %>"
+      /><br />
+      <input
+        type="number"
+        pattern="[1-9]{1}[0-9]{9}"
+        name="contactNumber"
+        placeholder="Contact name"
+        value="<%= contact.contact[0].number %>"
+      /><br />
+      <input type="submit" value="Update Contact" />
+    </form>
+  </body>
+</html>
