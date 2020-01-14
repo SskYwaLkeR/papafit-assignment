@@ -8,13 +8,19 @@
     <h1>Hello!! welcome to the phonebook app</h1>
 
     <form action="/addPhone" method="post">
-      <input type="text" name="contactName" placeholder="Contact Name" />
+      <input
+        type="text"
+        name="contactName"
+        placeholder="Contact Name"
+        required
+      />
       <br />
       <input
         type="number"
         pattern="[1-9]{1}[0-9]{9}"
         name="contactNumber"
         placeholder="Contact Number"
+        required
       /><br />
       <input type="submit" value="Add Contact" />
     </form>

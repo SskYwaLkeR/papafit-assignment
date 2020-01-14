@@ -12,6 +12,7 @@
         type="text"
         name="contactName"
         placeholder="contact name"
+        required
         value="<%= contact.contact[0].name %>"
       /><br />
       <input
@@ -19,6 +20,7 @@
         pattern="[1-9]{1}[0-9]{9}"
         name="contactNumber"
         placeholder="Contact name"
+        required
         value="<%= contact.contact[0].number %>"
       /><br />
       <input type="submit" value="Update Contact" />
