@@ -20,4 +20,4 @@
 
 ## Dependency
 
-    This package do require node version 8+ installed on your pc
+    This package do require node version 8+ and mongodb installed on your pc
