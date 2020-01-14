@@ -17,6 +17,8 @@ router.get("/viewAll", (req, res) => {
     .catch(err => res.send(`oops error occurred at ${err}`));
 });
 
+// post route to create new contacts
+
 router.post("/addPhone", (req, res) => {
   phoneBookModel
     .create({
@@ -29,6 +31,15 @@ router.post("/addPhone", (req, res) => {
       console.log(contact);
       res.redirect("/viewAll");
     })
+    .catch(err => res.send(`Opps error occurred at ${err}`));
+});
+
+// Delete route
+
+router.get("/delete/:id", (req, res) => {
+  phoneBookModel
+    .findOneAndDelete({ _id: req.params.id })
+    .then(contact => res.redirect("/viewALl"))
     .catch(err => res.send(`Opps error occurred at ${err}`));
 });
 
